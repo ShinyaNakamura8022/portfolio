@@ -7,6 +7,7 @@ body {
   color: #5f4040;
 }
 
+
 a {
   transition: opacity .3s;
   text-decoration: none;
@@ -161,6 +162,7 @@ li {
 
 .main-visual-inner {
   padding: 0 40px;
+  text-align: left;
 }
 
 .main-visual-title {
@@ -169,7 +171,14 @@ li {
   line-height: 1.2;
   margin-bottom: 5px;
   letter-spacing: .1em;
+　text-align: center;
+  opacity: 0;
+   animation-name: fadein-bottom;
+   animation-duration: 1.5s;
+   animation-timing-function: ease-out;
+   animation-fill-mode: forwards;
 }
+
 /*--------------------------------
  Works
 ---------------------------------*/
@@ -207,7 +216,6 @@ li {
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
   transform: translateY(-0.1875em);
 }
-
 
 .works-name {
   font-size: 12px;
@@ -289,6 +297,7 @@ li {
 .star5_rating[data-rate="1"]:after{ width: 20%; } /* 星1 */
 .star5_rating[data-rate="0.5"]:after{ width: 10%; } /* 星0.5 */
 .star5_rating[data-rate="0"]:after{ width: 0%; } /* 星0 */
+
 
 /*--------------------------------
  About
@@ -529,4 +538,15 @@ li {
   .article {
     padding: 50px 0;
   }
+}
+
+@keyframes fadein-bottom{
+   0% {
+      opacity: 0;
+      transform: translateY(20px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateY(0);
+}
 }
